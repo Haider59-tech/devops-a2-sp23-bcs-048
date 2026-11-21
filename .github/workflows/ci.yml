@@ -19,9 +19,10 @@ jobs:
           grep -q '<title>' index.html
           grep -q 'SP23-BCS-048' index.html
 
-      - name: Check the extra section
+      - name: Check the page content
         run: |
-          grep -q 'EXTRA_HEADING' index.html
+          grep -q 'Tanseer' index.html
+          grep -q 'id="about"' index.html
 
       - name: Log in to Docker Hub
         if: github.ref == 'refs/heads/main'
